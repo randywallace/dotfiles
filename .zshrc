@@ -60,3 +60,4 @@ bindkey "^W" backward-kill-word
 bindkey "^U" kill-line
 bindkey "^H" backward-delete-char
 
+alias vi=vim
