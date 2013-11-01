@@ -1,0 +1,17 @@
+[user]
+	name = Randy D. Wallace Jr.
+	email = randy@edatasource.com
+[core]
+	editor = vim
+	pager = less
+[color]
+	ui = true
+	sh = auto
+[color "sh"]
+	branch = green
+	workdir = blue bold
+	dirty = red
+	dirty-stash = red
+	repo-state = red
+[alias]
+glog = log --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph
