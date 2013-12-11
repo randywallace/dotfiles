@@ -88,3 +88,5 @@ map <leader>fi :setlocal foldmethod=indent<cr>
 map <leader>fs :setlocal foldmethod=syntax<cr>
 let g:syntastic_always_populate_loc_list=1
 filetype plugin indent on
+let g:is_bash = 1
+let g:sh_fold_enabled = 3
