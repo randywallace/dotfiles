@@ -40,6 +40,7 @@ endif
 Bundle 'Shougo/neocomplcache'
 Bundle 'honza/dockerfile.vim'
 Bundle 'rodjek/vim-puppet'
+Bundle 'digitaltoad/vim-jade'
 map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
 map <leader>e :NERDTreeFind<CR>
 nmap <leader>nt :NERDTreeFind<CR>
