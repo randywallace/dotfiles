@@ -52,47 +52,47 @@ fi
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=()
-if which git > /dev/null; then
+if which git > /dev/null 2>&1; then
   plugins=($plugins git git-extras github)
 fi
 
-if which rvm > /dev/null; then
+if which rvm > /dev/null 2>&1; then
   plugins=($plugins rvm)
 fi
 
-if which ruby > /dev/null; then
+if which ruby > /dev/null 2>&1; then
   plugins=($plugins ruby rails gem)
 fi
 
-if which bundle > /dev/null; then
+if which bundle > /dev/null 2>&1; then
   plugins=($plugins bundler)
 fi
 
-if which command-not-found > /dev/null; then
+if which command-not-found > /dev/null 2>&1; then
   plugins=($plugins command-not-found)
 fi
 
-if which aws > /dev/null; then
+if which aws > /dev/null 2>&1; then
   plugins=($plugins aws)
 fi
 
-if which tmux > /dev/null; then
+if which tmux > /dev/null 2>&1; then
   plugins=($plugins tmux)
 fi
 
-if which docker > /dev/null; then
+if which docker > /dev/null 2>&1; then
   plugins=($plugins docker)
 fi
 
-if which apt-get > /dev/null; then
+if which apt-get > /dev/null 2>&1; then
   plugins=($plugins debian)
 fi
 
-if which npm > /dev/null; then
+if which npm > /dev/null 2>&1; then
   plugins=($plugins npm)
 fi
 
-if which yum > /dev/null; then
+if which yum > /dev/null 2>&1; then
   plugins=($plugins yum)
 fi
 # Customize to your needs...
