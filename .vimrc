@@ -41,6 +41,12 @@ Bundle 'Shougo/neocomplcache'
 Bundle 'honza/dockerfile.vim'
 Bundle 'rodjek/vim-puppet'
 Bundle 'digitaltoad/vim-jade'
+Bundle "motus/pig.vim"
+Bundle 'groenewege/vim-less'
+Bundle 'hail2u/vim-css3-syntax'
+Bundle 'tpope/vim-haml'
+Bundle 'elzr/vim-json'
+Bundle "pangloss/vim-javascript"
 map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
 map <leader>e :NERDTreeFind<CR>
 nmap <leader>nt :NERDTreeFind<CR>
@@ -91,3 +97,4 @@ let g:syntastic_always_populate_loc_list=1
 filetype plugin indent on
 let g:is_bash = 1
 let g:sh_fold_enabled = 3
+let g:vim_json_syntax_conceal = 0

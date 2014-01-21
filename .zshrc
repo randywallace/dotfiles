@@ -39,16 +39,62 @@ DISABLE_AUTO_TITLE="true"
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 KEYTIMEOUT=1
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rvm ruby rails bundler colored-man colorize command-not-found debian docker gem git-extras github tmux vi-mode themes history-substring-search vi-mode aws)
-
 source $ZSH/oh-my-zsh.sh
 if [ -e /etc/profile.d/rvm.sh ]; then
   source /etc/profile.d/rvm.sh
 fi
 
+if [ -d "$HOME/.rvm" ]; then
+  PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+fi
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=()
+if which git > /dev/null; then
+  plugins=($plugins git git-extras github)
+fi
+
+if which rvm > /dev/null; then
+  plugins=($plugins rvm)
+fi
+
+if which ruby > /dev/null; then
+  plugins=($plugins ruby rails gem)
+fi
+
+if which bundle > /dev/null; then
+  plugins=($plugins bundler)
+fi
+
+if which command-not-found > /dev/null; then
+  plugins=($plugins command-not-found)
+fi
+
+if which aws > /dev/null; then
+  plugins=($plugins aws)
+fi
+
+if which tmux > /dev/null; then
+  plugins=($plugins tmux)
+fi
+
+if which docker > /dev/null; then
+  plugins=($plugins docker)
+fi
+
+if which apt-get > /dev/null; then
+  plugins=($plugins debian)
+fi
+
+if which npm > /dev/null; then
+  plugins=($plugins npm)
+fi
+
+if which yum > /dev/null; then
+  plugins=($plugins yum)
+fi
 # Customize to your needs...
 
 bindkey -M vicmd '?' history-incremental-search-backward
@@ -62,6 +108,3 @@ bindkey "^H" backward-delete-char
 
 alias vi=vim
 
-if [ -d "$HOME/.rvm" ]; then
-  PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-fi
