@@ -98,3 +98,4 @@ filetype plugin indent on
 let g:is_bash = 1
 let g:sh_fold_enabled = 3
 let g:vim_json_syntax_conceal = 0
+set foldmethod=syntax
