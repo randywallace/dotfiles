@@ -61,3 +61,7 @@ bindkey "^U" kill-line
 bindkey "^H" backward-delete-char
 
 alias vi=vim
+
+if [ -d "$HOME/.rvm" ]; then
+  PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+fi

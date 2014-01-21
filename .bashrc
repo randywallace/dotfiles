@@ -116,3 +116,7 @@ fi
 for config in $(find ~/.bashrc.d/ -type f); do
   source $config
 done
+
+if [ -d "$HOME/.rvm" ]; then
+  PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+fi
