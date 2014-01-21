@@ -47,6 +47,7 @@ Bundle 'hail2u/vim-css3-syntax'
 Bundle 'tpope/vim-haml'
 Bundle 'elzr/vim-json'
 Bundle "pangloss/vim-javascript"
+Bundle 'othree/html5.vim'
 map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
 map <leader>e :NERDTreeFind<CR>
 nmap <leader>nt :NERDTreeFind<CR>
@@ -99,3 +100,4 @@ let g:is_bash = 1
 let g:sh_fold_enabled = 3
 let g:vim_json_syntax_conceal = 0
 set foldmethod=syntax
+let g:xml_syntax_folding=1
