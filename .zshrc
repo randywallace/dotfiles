@@ -93,7 +93,6 @@ fi
 
 if which ssh-agent > /dev/null 2>&1; then
   plugins=($plugins ssh-agent)
-  zstyle :omz:plugins:ssh-agent agent-forwarding on
 fi
 # Customize to your needs...
 
@@ -108,7 +107,7 @@ bindkey "^H" backward-delete-char
 
 alias vi=vim
 
-id_files=$(cd $HOME/.ssh && ls | grep -E 'id\_.*[^p][^u][^b]$')
+id_files=$(cd $HOME/.ssh && ls | grep 'id_' | grep -v -E '\.pub$')
 id_files=(${=id_files})
 if [ "$id_files[(I)$id_files[-1]]" -gt 0 ]; then
   zstyle :omz:plugins:ssh-agent identities $id_files
