@@ -31,18 +31,13 @@ DISABLE_AUTO_TITLE="true"
 # DISABLE_CORRECTION="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment following line if you want to disable marking untracked files under
 # VCS as dirty. This makes repository status check for large repositories much,
 # much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 KEYTIMEOUT=1
-
-source $ZSH/oh-my-zsh.sh
-if [ -e /etc/profile.d/rvm.sh ]; then
-  source /etc/profile.d/rvm.sh
-fi
 
 if [ -d "$HOME/.rvm" ]; then
   PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
@@ -95,6 +90,11 @@ fi
 if which yum > /dev/null 2>&1; then
   plugins=($plugins yum)
 fi
+
+if which ssh-agent > /dev/null 2>&1; then
+  plugins=($plugins ssh-agent)
+  zstyle :omz:plugins:ssh-agent agent-forwarding on
+fi
 # Customize to your needs...
 
 bindkey -M vicmd '?' history-incremental-search-backward
@@ -107,4 +107,16 @@ bindkey "^U" kill-line
 bindkey "^H" backward-delete-char
 
 alias vi=vim
+
+id_files=$(cd $HOME/.ssh && ls | grep -E 'id\_.*[^p][^u][^b]$')
+id_files=(${=id_files})
+if [ "$id_files[(I)$id_files[-1]]" -gt 0 ]; then
+  zstyle :omz:plugins:ssh-agent identities $id_files
+fi
+
+source $ZSH/oh-my-zsh.sh
+
+if [ -e /etc/profile.d/rvm.sh ]; then
+  source /etc/profile.d/rvm.sh
+fi
 
