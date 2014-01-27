@@ -24,3 +24,11 @@ fi
 if [ -d "$HOME/.rvm" ]; then
     PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 fi
+
+if [ -d "/opt/local/bin" ]; then
+    PATH=$PATH:/opt/local/bin
+fi
+
+if [ -d "/opt/local/sbin" ]; then
+  PATH=$PATH:/opt/local/sbin
+fi

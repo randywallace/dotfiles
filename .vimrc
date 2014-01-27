@@ -48,6 +48,7 @@ Bundle 'tpope/vim-haml'
 Bundle 'elzr/vim-json'
 Bundle "pangloss/vim-javascript"
 Bundle 'othree/html5.vim'
+Bundle 'kchmck/vim-coffee-script'
 map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
 map <leader>e :NERDTreeFind<CR>
 nmap <leader>nt :NERDTreeFind<CR>
