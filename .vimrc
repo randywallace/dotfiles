@@ -84,6 +84,9 @@ set laststatus=2
 let g:Powerline_symbols = 'fancy'
 set timeoutlen=1000 ttimeoutlen=0
 nnoremap <silent> <leader>tt :TlistToggle<CR>
+nnoremap <leader>i :set invpaste paste?<CR>
+set pastetoggle=<leader>i
+set showmode
 let g:Tlist_Use_Right_Window   = 1
 let Tlist_WinWidth = 50
 let g:neocomplcache_enable_at_startup = 1
