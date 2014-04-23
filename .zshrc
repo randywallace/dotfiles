@@ -120,3 +120,9 @@ if [ -e /etc/profile.d/rvm.sh ]; then
   source /etc/profile.d/rvm.sh
 fi
 
+if [ -e $HOME/dotfiles ]; then
+  pushd $HOME/dotfiles > /dev/null 2>&1
+  git submodule update --init --recursive
+  vim +BundleInstall +qall
+  popd >/dev/null 2>&1
+fi
