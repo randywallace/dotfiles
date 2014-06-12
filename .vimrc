@@ -49,6 +49,7 @@ Bundle 'elzr/vim-json'
 Bundle "pangloss/vim-javascript"
 Bundle 'othree/html5.vim'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'shinokada/dragvisuals.vim'
 map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
 map <leader>e :NERDTreeFind<CR>
 nmap <leader>nt :NERDTreeFind<CR>
@@ -105,3 +106,11 @@ let g:sh_fold_enabled = 3
 let g:vim_json_syntax_conceal = 0
 set foldmethod=syntax
 let g:xml_syntax_folding=1
+
+" For dragvisuals
+runtime plugin/dragvisuals.vim
+vmap  <expr>  <LEFT>   DVB_Drag('left')
+vmap  <expr>  <RIGHT>  DVB_Drag('right')
+vmap  <expr>  <DOWN>   DVB_Drag('down')
+vmap  <expr>  <UP>     DVB_Drag('up')
+vmap  <expr>  D        DVB_Duplicate()
