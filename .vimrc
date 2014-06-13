@@ -23,7 +23,8 @@ Bundle 'flazz/vim-colorschemes'
 Bundle 'corntrace/bufexplorer'
 Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Bundle 'altercation/solarized', {'rtp': 'vim-colors-solarized/'}
-Bundle 'Lokaltog/vim-powerline'
+"Bundle 'Lokaltog/vim-powerline'
+Bundle 'bling/vim-airline'
 Bundle 'benmills/vimux'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
@@ -50,6 +51,10 @@ Bundle "pangloss/vim-javascript"
 Bundle 'othree/html5.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'shinokada/dragvisuals.vim'
+Bundle 'tpope/vim-markdown'
+Bundle 'sjl/gundo.vim'
+Bundle 'terryma/vim-multiple-cursors'
+Bundle 'mhinz/vim-signify'
 map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
 map <leader>e :NERDTreeFind<CR>
 nmap <leader>nt :NERDTreeFind<CR>
@@ -84,7 +89,7 @@ let g:Tex_CompileRule_pdf = 'xelatex --interaction=nonstopmode --shell-escape $*
 set laststatus=2
 let g:Powerline_symbols = 'fancy'
 set timeoutlen=1000 ttimeoutlen=0
-nnoremap <silent> <leader>tt :TlistToggle<CR>
+nnoremap <silent> <leader>tt :TagbarToggle<CR>
 nnoremap <leader>i :set invpaste paste?<CR>
 set pastetoggle=<leader>i
 set showmode
@@ -114,3 +119,26 @@ vmap  <expr>  <RIGHT>  DVB_Drag('right')
 vmap  <expr>  <DOWN>   DVB_Drag('down')
 vmap  <expr>  <UP>     DVB_Drag('up')
 vmap  <expr>  D        DVB_Duplicate()
+
+" For Gundo
+nnoremap <leader>u :GundoToggle<CR>
+
+"vim-arline"
+let g:airline_theme             = 'powerlineish'
+let g:airline_enable_branch     = 1
+let g:airline_enable_syntastic  = 1
+let g:airline#extensions#tabline#enabled = 1
+
+"" vim-powerline symbols
+let g:airline#extensions#tabline#left_sep = '⮀'
+let g:airline#extensions#tabline#left_alt_sep = '⮀'
+let g:airline_left_sep          = '⮀'
+let g:airline_left_alt_sep      = '⮁'
+let g:airline_right_sep         = '⮂'
+let g:airline_right_alt_sep     = '⮃'
+let g:airline_branch_prefix     = '⭠'
+let g:airline_readonly_symbol   = '⭤'
+let g:airline_linecolumn_prefix = '⭡'
+
+" vim-signify
+let g:signify_vcs_list = [ 'git', 'svn' ]
