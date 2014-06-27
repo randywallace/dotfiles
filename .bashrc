@@ -2,6 +2,10 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+if [ -e ~/.custom_bashrc ]; then
+  source ~/.custom_bashrc
+fi
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -128,6 +132,3 @@ if [ -e $HOME/dotfiles ]; then
   popd >/dev/null 2>&1
 fi
 
-if [ -e ~/.custom_bashrc ]; then
-  source ~/.custom_bashrc
-fi
