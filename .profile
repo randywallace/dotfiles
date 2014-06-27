@@ -33,6 +33,6 @@ if [ -d "/opt/local/sbin" ]; then
   PATH=$PATH:/opt/local/sbin
 fi
 
-if [ -d "/usr/java/default" ]; then
+if [ -e "/usr/java/default" ]; then
   export JAVA_HOME=/usr/java/default
 fi
