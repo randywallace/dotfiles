@@ -128,3 +128,6 @@ if [ -e $HOME/dotfiles ]; then
   popd >/dev/null 2>&1
 fi
 
+if [ -e ~/.custom_bashrc ]; then
+  source ~/.custom_bashrc
+fi
