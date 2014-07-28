@@ -132,3 +132,6 @@ if [ -e $HOME/dotfiles ]; then
   popd >/dev/null 2>&1
 fi
 
+if [ -f /opt/local/share/git/contrib/completion/git-prompt.sh ]; then
+  . /opt/local/share/git/contrib/completion/git-prompt.sh
+fi
