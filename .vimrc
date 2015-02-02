@@ -142,3 +142,6 @@ let g:airline_linecolumn_prefix = '⭡'
 
 " vim-signify
 let g:signify_vcs_list = [ 'git', 'svn' ]
+
+" Sudo write
+cmap w!! w !sudo tee > /dev/null %
