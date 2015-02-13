@@ -55,6 +55,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'sjl/gundo.vim'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'mhinz/vim-signify'
+Bundle 'vim-ruby/vim-ruby'
 map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
 map <leader>e :NERDTreeFind<CR>
 nmap <leader>nt :NERDTreeFind<CR>
@@ -101,6 +102,10 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType ruby,eruby setlocal omnifunc=rubycomplete#Complete
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 set tags=~/.vimtags
 map <leader>fi :setlocal foldmethod=indent<cr>
 map <leader>fs :setlocal foldmethod=syntax<cr>
@@ -110,6 +115,14 @@ let g:is_bash = 1
 let g:sh_fold_enabled = 3
 let g:vim_json_syntax_conceal = 0
 set foldmethod=syntax
+
+" http://vim.wikia.com/wiki/Keep_folds_closed_while_inserting_text
+autocmd InsertEnter * if !exists('w:last_fdm') | let w:last_fdm=&foldmethod | setlocal foldmethod=manual | endif
+autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:last_fdm | unlet w:last_fdm | endif
+
+" do not regard "-" as word seperator (css Files!)
+set iskeyword+=-
+
 let g:xml_syntax_folding=1
 
 " For dragvisuals
@@ -145,3 +158,4 @@ let g:signify_vcs_list = [ 'git', 'svn' ]
 
 " Sudo write
 cmap w!! w !sudo tee > /dev/null %
+
