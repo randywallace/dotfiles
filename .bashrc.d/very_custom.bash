@@ -81,7 +81,6 @@ setup_path() {
   PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin" # Homebrew installed files on the head of the PATH
   which port > /dev/null 2>&1 && PATH="/opt/local/bin:/opt/local/sbin:${PATH}" # If MacPorts is installed, its executables override all others...
   [[ -d "${HOME}/bin" ]] && PATH="${HOME}/bin:${PATH}"
-  select_jdk "${DEFAULT_JAVA_VERSION:-1.8.0_20}"
   setup_flyway
   [[ -s "${HOME}/.rvm/scripts/rvm" ]] && source "${HOME}/.rvm/scripts/rvm" # Source RVM last; mangles the hell out of the head of the $PATH
   export PATH
