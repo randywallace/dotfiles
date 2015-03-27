@@ -56,6 +56,7 @@ Bundle 'sjl/gundo.vim'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'mhinz/vim-signify'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'ConradIrwin/vim-bracketed-paste'
 map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
 map <leader>e :NERDTreeFind<CR>
 nmap <leader>nt :NERDTreeFind<CR>
