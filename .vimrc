@@ -1,4 +1,5 @@
 set nocompatible
+set modelines=5
 syntax on
 filetype off
 setlocal spell spelllang=en_us
