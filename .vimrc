@@ -169,3 +169,20 @@ let g:signify_vcs_list = [ 'git', 'svn' ]
 
 " Sudo write
 cmap w!! w !sudo tee > /dev/null %
+
+" Custom Command
+let g:silent_custom_command = 0
+function! RunCustomCommand()
+  up
+  if g:silent_custom_command
+    execute 'silent !' . s:customcommand
+  else
+    execute '!' . s:customcommand
+  end
+endfunction
+ 
+function! SetCustomCommand()
+  let s:customcommand = input('Enter Custom Command$ ')
+endfunction
+map <leader>r :call RunCustomCommand()<cr>
+map <leader>s :call SetCustomCommand()<cr>

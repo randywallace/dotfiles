@@ -1,5 +1,5 @@
 PATH=~/bin:${PATH}
 
-eval `keychain --eval id_dsa`
+#eval `keychain --eval id_dsa`
 
-alias docker="docker_shell.sh"
+#alias docker="docker_shell.sh"
