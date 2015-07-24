@@ -116,7 +116,7 @@ let g:syntastic_always_populate_loc_list=1
 filetype plugin indent on
 let g:is_bash = 1
 let g:sh_fold_enabled = 3
-let g:vim_json_syntax_conceal = 0
+let g:vim_json_syntax_conceal = 1
 set foldmethod=syntax
 
 " http://vim.wikia.com/wiki/Keep_folds_closed_while_inserting_text
