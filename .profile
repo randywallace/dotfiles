@@ -26,11 +26,11 @@ if [ -d "$HOME/.rvm" ]; then
 fi
 
 if [ -d "/opt/local/bin" ]; then
-    PATH=$PATH:/opt/local/bin
+    PATH=/opt/local/bin:$PATH
 fi
 
 if [ -d "/opt/local/sbin" ]; then
-  PATH=$PATH:/opt/local/sbin
+  PATH=/opt/local/sbin:$PATH
 fi
 
 if [ -e "/usr/java/default" ]; then

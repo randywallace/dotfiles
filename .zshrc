@@ -125,6 +125,6 @@ fi
 if [ -e $HOME/dotfiles ]; then
   pushd $HOME/dotfiles > /dev/null 2>&1
   git submodule update --init --recursive
-  vim +BundleInstall +qall
+  vim +BundleClean! +BundleInstall +qall now
   popd >/dev/null 2>&1
 fi

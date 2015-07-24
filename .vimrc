@@ -108,6 +108,7 @@ autocmd FileType ruby,eruby setlocal omnifunc=rubycomplete#Complete
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+let g:easytags_suppress_ctags_warning = 1
 set tags=~/.vimtags
 map <leader>fi :setlocal foldmethod=indent<cr>
 map <leader>fs :setlocal foldmethod=syntax<cr>
@@ -187,3 +188,6 @@ function! SetCustomCommand()
 endfunction
 map <leader>r :call RunCustomCommand()<cr>
 map <leader>s :call SetCustomCommand()<cr>
+
+"Autoformat JSON
+nmap =j :%!python -c "import json, sys; print json.dumps(json.load(sys.stdin), indent=2)"<CR>
