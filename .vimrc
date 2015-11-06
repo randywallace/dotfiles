@@ -17,7 +17,7 @@ set autoindent
 let mapleader = ','
 nnoremap ; :
 set encoding=utf-8
-Bundle 'gmarik/vundle'
+Bundle 'VundleVim/Vundle.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle "jnurmine/Zenburn"
 Bundle 'jistr/vim-nerdtree-tabs'
@@ -151,6 +151,8 @@ let g:airline_theme             = 'powerlineish'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#hunks#enabled = 1
+let g:airline#extensions#tagbar#enabled = 1
 
 "" vim-powerline symbols
 let g:airline#extensions#tabline#left_sep = ''
