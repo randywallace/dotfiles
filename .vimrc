@@ -2,7 +2,8 @@ set nocompatible
 set modelines=5
 syntax on
 filetype off
-setlocal spell spelllang=en_us
+" setlocal spell spelllang=en_us
+set spell
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 set t_Co=256
