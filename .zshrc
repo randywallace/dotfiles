@@ -1,4 +1,8 @@
 setopt nohup
+
+HISTSIZE=100000
+SAVEHIST=100000
+
 #
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
