@@ -4,7 +4,7 @@ syntax on
 filetype off
 " setlocal spell spelllang=en_us
 set spell
-set rtp+=~/.vim/bundle/vundle
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 set t_Co=256
 set background=dark
