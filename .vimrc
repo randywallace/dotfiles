@@ -27,7 +27,7 @@ Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Bundle 'altercation/solarized', {'rtp': 'vim-colors-solarized/'}
 "Bundle 'Lokaltog/vim-powerline'
 Bundle 'bling/vim-airline'
-Bundle 'bling/vim-airline-themes'
+Bundle 'vim-airline/vim-airline-themes'
 Bundle 'benmills/vimux'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
