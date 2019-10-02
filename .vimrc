@@ -53,7 +53,7 @@ Bundle 'elzr/vim-json'
 Bundle "pangloss/vim-javascript"
 Bundle 'othree/html5.vim'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'shinokada/dragvisuals.vim'
+"Bundle 'shinokada/dragvisuals.vim'
 Bundle 'tpope/vim-markdown'
 Bundle 'sjl/gundo.vim'
 Bundle 'terryma/vim-multiple-cursors'
